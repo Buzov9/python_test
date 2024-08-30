@@ -4,3 +4,4 @@ while non < len(my_list) and my_list[non] >= -1:
     if my_list[non] != 0:
         print(my_list[non])
     non += 1
+#ss
