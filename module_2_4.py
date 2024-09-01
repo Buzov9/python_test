@@ -13,4 +13,3 @@ for i in numbers[1::]: # надеюсь это честно
         not_primes.append(i)
 print(f'primes:{primes}')
 print(f'not primes:{not_primes}')
-
