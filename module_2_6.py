@@ -1,5 +1,5 @@
-#n = int(input("число на первой вставке: "))
-n = 6
+n = int(input("число на первой вставке: "))
+# n = 6
 
 result = []
 if n % 2 == 0:
@@ -15,4 +15,4 @@ for i in range(1, n+1):
         if (i + j) == n:
             result.append((i, j))
 print(*result)
-print(f'{result}')
+
