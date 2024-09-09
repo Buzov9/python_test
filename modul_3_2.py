@@ -1,7 +1,14 @@
 def send_email(message, recipient, sender='university.help@gmail.com'):
     at = '@'
     domens = ['com', 'ru', 'net']
-
+    recipient = recipient.lower()
+    sender = sender.lower()
+    if sender == recipient:
+        print('Нельзя писать самому себе')
+    elif sender == 'university.help@gmail.com':
+        print(f'письмо успешно отправлено с адреса {sender} на адрес {recipient}')
+    else:
+        print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! письмо отправлено с адреса {sender} на адрес {recipient}')
 
     for i in range(len(recipient)):
         have_at = False
@@ -14,15 +21,11 @@ def send_email(message, recipient, sender='university.help@gmail.com'):
                 return have_at
     if not have_at:
         print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
-        pass
-    recipient = recipient.lower()
-    sender = sender.lower()
-    if sender == recipient:
+    elif sender == recipient:
         print('Нельзя писать самому себе')
-
-
-send_email("sos", 'university.help@gmail.com')
-
-
+    elif sender == 'university.help@gmail.com':
+        print(f'Письмо успешно отправлено с адреса {sender} на адрес {recipient}')
+    else:
+        print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! письмо отправлено с адреса {sender} на адрес {recipient}')
 
 
