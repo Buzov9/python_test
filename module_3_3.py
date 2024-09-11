@@ -5,7 +5,6 @@ def print_params(a=1, b='str', c=True):
 print_params()
 print_params(b=25)
 print_params(c=[1, 2, 3])
-
 values_list = [1.5, 2, 'word']
 values_dict = {'a': False, 'b': 11, 'c': '1c'}
 print_params(*values_list)
